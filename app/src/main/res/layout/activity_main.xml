@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorYellow"
+    android:padding="@dimen/activity_horizontal_margin"
+    tools:context="com.android.androidstorage.MainActivity">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="20dp"
+        android:id="@+id/layout_title"
+        >
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/sjsu_logo" />
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title"
+            android:textSize="@dimen/font_medium"
+            android:textColor="@color/colorBlack"
+            android:layout_toRightOf="@id/imageView1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="0dp"
+            />
+    </RelativeLayout>
+    <TableLayout
+        android:id="@+id/button_grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="2"
+        android:layout_marginTop="40dp">
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp">
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="50dp"
+                android:layout_marginRight="5dp"
+                android:onClick="gotoPreference"
+                android:text="@string/preference_btn"
+                android:textColor="@color/colorWhite"
+                android:textAllCaps="false"
+                android:textSize="@dimen/font_medium"
+                android:background="@color/colorBlack"/>
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:layout_height="50dp"
+                android:onClick="gotoSQLite"
+                android:text="@string/sqlite_btn"
+                android:textSize="@dimen/font_medium"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:background="@color/colorBlack" />
+        </TableRow>
+    </TableLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginTop="40dp">
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBlack"
+            android:textColor="@color/colorWhite"
+            android:padding="3dp"
+            android:typeface="monospace"
+            />
+    </ScrollView>
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/close_btn"
+        android:textSize="@dimen/font_medium"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorBlack"
+        android:onClick="closeApp" />
+</LinearLayout>
